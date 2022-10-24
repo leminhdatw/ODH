@@ -10,7 +10,7 @@ class builtin_encn_Collins {
         let locale = await api.locale();
         if (locale.indexOf('CN') != -1) return '柯林斯英汉双解(内置)';
         if (locale.indexOf('TW') != -1) return '柯林斯英漢雙解(內置)';
-        return 'Collins EN->CN Dictionary((builtin))';
+        return 'Collins EN->en Dictionary((builtin))';
     }
 
 
@@ -114,11 +114,13 @@ class builtin_encn_Collins {
                 span.pos  {text-transform:lowercase; font-size:0.9em; margin-right:5px; padding:2px 4px; color:white; background-color:#0d47a1; border-radius:3px;}
                 span.tran {margin:0; padding:0;}
                 span.eng_tran {margin-right:3px; padding:0;}
-                span.chn_tran {color:#0d47a1;}
+
+
                 ul.sents {font-size:0.8em; list-style:square inside; margin:3px 0;padding:5px;background:rgba(13,71,161,0.1); border-radius:5px;}
                 li.sent  {margin:0; padding:0;}
                 span.eng_sent {margin-right:5px;}
-                span.chn_sent {color:#0d47a1;}
+
+
             </style>`;
         return css;
     }
