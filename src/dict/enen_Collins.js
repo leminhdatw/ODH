@@ -59,7 +59,9 @@ class enen_Collins {
         let extrainfo = bandnum ? `<span class="band">${'\u25CF'.repeat(Number(bandnum))}</span>` : '';
 
         let sound = dictionary.querySelector('a.hwd_sound');
-        let audios = sound ? [sound.dataset.srcMp3] : [];
+        let audios = [];
+                audios[0] = `https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(expression)}&type=1`;
+                audios[1] = `https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(expression)}&type=2`;
         // make definition segement
         let definitions = [];
         let defblocks = dictionary.querySelectorAll('.hom') || [];
